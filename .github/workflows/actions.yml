@@ -13,7 +13,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - uses: actions/checkout@v4
       - run: terraform init
-      - run: terraform plan
       - run: terraform apply -auto-approve
       - run: sleep 120s
       - run: terraform destroy -auto-approve
